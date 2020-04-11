@@ -1,0 +1,100 @@
+apiVersion: v1
+entries:
+  jxlabs-nos-resources:
+  - apiVersion: v1
+    created: "2020-04-11T20:09:32.13912+02:00"
+    dependencies:
+    - alias: gcactivities
+      name: jx
+      repository: http://chartmuseum.jenkins-x.io
+      version: 2.0.1143
+    - alias: gcpods
+      name: jx
+      repository: http://chartmuseum.jenkins-x.io
+      version: 2.0.1143
+    - alias: gcpreviews
+      name: jx
+      repository: http://chartmuseum.jenkins-x.io
+      version: 2.0.1143
+    - alias: controllerbuild
+      condition: controllerbuild.enabled
+      name: jx
+      repository: http://chartmuseum.jenkins-x.io
+      version: 2.0.1143
+    - alias: controllerrole
+      condition: controllerrole.enabled
+      name: jx
+      repository: http://chartmuseum.jenkins-x.io
+      version: 2.0.1143
+    description: A Helm chart for the resources for JX Boot
+    digest: 198244673c955fe6ca7d7346bc3d16da8c47a681c3fa40f71f3a1594acea0f02
+    icon: https://avatars2.githubusercontent.com/u/47602533
+    name: jxlabs-nos-resources
+    urls:
+    - https://github.com/nxmatic/jxlabs-nos-resources/releases/download/jxlabs-nos-resources-0.0.136-nxmatic/jxlabs-nos-resources-0.0.136-nxmatic.tgz
+    version: 0.0.136-nxmatic
+  - apiVersion: v1
+    created: "2020-04-11T20:09:33.321932+02:00"
+    dependencies:
+    - alias: gcactivities
+      name: jx
+      repository: http://chartmuseum.jenkins-x.io
+      version: 2.0.1143
+    - alias: gcpods
+      name: jx
+      repository: http://chartmuseum.jenkins-x.io
+      version: 2.0.1143
+    - alias: gcpreviews
+      name: jx
+      repository: http://chartmuseum.jenkins-x.io
+      version: 2.0.1143
+    - alias: controllerbuild
+      condition: controllerbuild.enabled
+      name: jx
+      repository: http://chartmuseum.jenkins-x.io
+      version: 2.0.1143
+    - alias: controllerrole
+      condition: controllerrole.enabled
+      name: jx
+      repository: http://chartmuseum.jenkins-x.io
+      version: 2.0.1143
+    description: A Helm chart for the resources for JX Boot
+    digest: 210d4a8bc64819916a2fb5368a538d6572de8e8277d42e1af5654ecfd19e58cc
+    icon: https://avatars2.githubusercontent.com/u/47602533
+    name: jxlabs-nos-resources
+    urls:
+    - https://github.com/nxmatic/jxlabs-nos-resources/releases/download/jxlabs-nos-resources-v0.0.136-nxmatic/jxlabs-nos-resources-v0.0.136-nxmatic.tgz
+    version: v0.0.136-nxmatic
+  - apiVersion: v1
+    created: "2020-04-11T20:09:31.763667+02:00"
+    dependencies:
+    - alias: gcactivities
+      name: jx
+      repository: http://chartmuseum.jenkins-x.io
+      version: 2.0.1143
+    - alias: gcpods
+      name: jx
+      repository: http://chartmuseum.jenkins-x.io
+      version: 2.0.1143
+    - alias: gcpreviews
+      name: jx
+      repository: http://chartmuseum.jenkins-x.io
+      version: 2.0.1143
+    - alias: controllerbuild
+      condition: controllerbuild.enabled
+      name: jx
+      repository: http://chartmuseum.jenkins-x.io
+      version: 2.0.1143
+    - alias: controllerrole
+      condition: controllerrole.enabled
+      name: jx
+      repository: http://chartmuseum.jenkins-x.io
+      version: 2.0.1143
+    description: A Helm chart for the resources for JX Boot
+    digest: f91c0cb54bab469c22ce0824c18600c42dbb350bea8256009bc0f3c3c83392dd
+    icon: https://avatars2.githubusercontent.com/u/47602533
+    name: jxlabs-nos-resources
+    urls:
+    - https://github.com/nxmatic/jxlabs-nos-resources/releases/download/jxlabs-nos-resources-0.0.1-SNAPSHOT/jxlabs-nos-resources-0.0.1-SNAPSHOT.tgz
+    version: 0.0.1-SNAPSHOT
+generated: "2020-04-11T20:09:31.346391+02:00"
