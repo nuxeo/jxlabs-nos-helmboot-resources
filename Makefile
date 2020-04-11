@@ -41,7 +41,7 @@ else
 endif
 	helm package --destination .cr-release-packages jxlabs-nos-resources
 	jx step tag --version=$(VERSION)
-	jx step changelog --version=v$(VERSION) --batch-mode
+	jx step changelog --no-dev-release --version=$(VERSION) --batch-mode
 	cr upload --config cr-config.yaml --token=$(GIT_TOKEN)
 	cr index  --config cr-config.yaml --token=$(GIT_TOKEN)
 
