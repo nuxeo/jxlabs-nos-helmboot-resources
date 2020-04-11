@@ -30,7 +30,9 @@ clean:
 	rm -rf jxlabs-nos-resources/${NAME}*.tgz
 	rm -rf jxlabs-nos-resources/requirements.lock
 
-release: clean build .cr-release-packages
+release: clean build release-nobuild 
+
+release-nobuild:
 ifeq ($(OS),Darwin)
 	sed -i "" -e "s/version:.*/version: $(VERSION)/" jxlabs-nos-resources/Chart.yaml
 
