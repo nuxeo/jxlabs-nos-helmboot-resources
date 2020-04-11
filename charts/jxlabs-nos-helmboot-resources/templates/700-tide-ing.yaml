@@ -1,0 +1,38 @@
+{{- if or (eq "lighthouse" .Values.jxRequirements.webhook) (eq "prow" .Values.jxRequirements.webhook) }}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: tide
+  annotations:
+    kubernetes.io/ingress.class: nginx
+{{- if eq "NodePort" .Values.jxRequirements.ingress.serviceType }}
+    jenkins.io/host: "{{ .Values.jxRequirements.ingress.domain }}"
+{{- end }}
+{{- if .Values.ingress.annotations }}
+{{ toYaml .Values.ingress.annotations | indent 4 }}
+{{- end }}
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          serviceName: tide
+          servicePort: 80
+{{- if eq "NodePort" .Values.jxRequirements.ingress.serviceType }}
+        path: "/tide"
+{{- else if .Values.jxRequirements.ingress.domain }}
+    host: tide{{ .Values.jxRequirements.ingress.namespaceSubDomain }}{{ .Values.jxRequirements.ingress.domain }}
+{{- end }}
+{{- if .Values.jxRequirements.ingress.tls.enabled }}
+  tls:
+  - hosts:
+    - tide{{ .Values.jxRequirements.ingress.namespaceSubDomain }}{{ .Values.jxRequirements.ingress.domain }}
+{{- if .Values.jxRequirements.ingress.tls.secretName }}
+    secretName: "{{ .Values.jxRequirements.ingress.tls.secretName }}"
+{{- else if .Values.jxRequirements.ingress.tls.production }}
+    secretName: "tls-{{ .Values.jxRequirements.ingress.domain | replace "." "-" }}-p"
+{{- else }}
+    secretName: "tls-{{ .Values.jxRequirements.ingress.domain | replace "." "-" }}-s"
+{{- end }}
+{{- end }}
+{{- end }}

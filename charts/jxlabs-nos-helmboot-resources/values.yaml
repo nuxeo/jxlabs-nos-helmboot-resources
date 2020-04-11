@@ -7,6 +7,10 @@ buildPacks:
     label: "Kubernetes Workloads: Automated CI+CD with GitOps Promotion"
     gitUrl: "https://github.com/jenkins-x-labs/jenkins-x-kubernetes.git"
     gitRef: "master"
+  "nos-workloads":
+    label: "jxlabs-no version of Kubernetes Workloads: Automated CI+CD with GitOps Promotion"
+    gitUrl: "https://github.com/nuxeo/jxlabs-nos-buildpacks.git"
+    gitRef: "master"
 
 chartmuseumServiceLink:
   enabled: false
@@ -1109,6 +1113,7 @@ podTemplates:
     JX-base:
       name: jx-base
       label: jenkins-jx-base
+      devPodPorts: 9999 # don't have any port but we need it for using jx create devpod, to-do open an issue
       envVars:
         GIT_COMMITTER_EMAIL: jenkins-x@googlegroups.com
         GIT_AUTHOR_EMAIL: jenkins-x@googlegroups.com
@@ -1569,11 +1574,11 @@ jxRequirements:
   autoUpdate:
     enabled: false
     schedule: ""
-  bootConfigURL: https://github.com/jenkins-x/jxr-boot-config.git
+  bootConfigURL: https://github.com/nuxeo/jxlabs-nos-helmboot-config.git
   buildPacks:
     buildPackLibrary:
       gitRef: master
-      gitURL: https://github.com/jenkins-x/jxr-packs-kubernetes.git
+      gitURL: https://github.com/nuxeo/jxlabs-nos-buildpacks.git
   cluster:
     clustername: mycluster
     devEnvApprovers:
@@ -1626,5 +1631,5 @@ jxRequirements:
       url: ""
   versionStream:
     ref: master
-    url: https://github.com/jenkins-x/jenkins-x-versions.git
-  webhook: lighthouse
+    url: https://github.com/nxmatic/jxlabs-nos-versions.git
+  webhook: prow

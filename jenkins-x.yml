@@ -1,1 +1,10 @@
 buildPack: charts
+pipelineConfig:
+  pipelines:
+    overrides:
+    - name: release
+      step:
+        sh: make -C charts/jxlabs-nos-helmboot-resources release VERSION=$(cat VERSION)
+    - name: build
+      step:
+        sh: make -C charts/jxlabs-nos-helmboot-resources build VERSION=$(cat VERSION)
