@@ -1,9 +1,8 @@
-CHART_REPO := http://jenkins-x-chartmuseum:8080
-NAME := jxboot-helmfile-resources
+CHART_REPO := https://nxmatic.github.io/jxlabs-nos-resources
+NAME := jxlabs-nos-resources
 OS := $(shell uname)
 
-CHARTMUSEUM_CREDS_USR := $(shell cat /builder/home/basic-auth-user.json)
-CHARTMUSEUM_CREDS_PSW := $(shell cat /builder/home/basic-auth-pass.json)
+export HELM_HOME ?= $(shell pwd)/.helm
 
 init:
 	helm init --client-only
@@ -14,35 +13,39 @@ setup: init
 build: setup build-nosetup
 
 build-nosetup: clean
-	helm dependency build jxboot-helmfile-resources
-	helm lint jxboot-helmfile-resources
+	helm dependency build jxlabs-nos-resources
+	helm lint jxlabs-nos-resources
 
 install: clean build
-	helm upgrade ${NAME} jxboot-helmfile-resources --install
+	helm upgrade ${NAME} jxlabs-nos-resources --install
 
 upgrade: clean build
-	helm upgrade ${NAME} jxboot-helmfile-resources --install
+	helm upgrade ${NAME} jxlabs-nos-resources --install
 
 delete:
-	helm delete --purge ${NAME} jxboot-helmfile-resources
+	helm delete --purge ${NAME} jxlabs-nos-resources
 
 clean:
-	rm -rf jxboot-helmfile-resources/charts
-	rm -rf jxboot-helmfile-resources/${NAME}*.tgz
-	rm -rf jxboot-helmfile-resources/requirements.lock
+	rm -rf jxlabs-nos-resources/charts
+	rm -rf jxlabs-nos-resources/${NAME}*.tgz
+	rm -rf jxlabs-nos-resources/requirements.lock
 
-release: clean build
+release: clean build release-nobuild 
+
+release-nobuild:
 ifeq ($(OS),Darwin)
-	sed -i "" -e "s/version:.*/version: $(VERSION)/" jxboot-helmfile-resources/Chart.yaml
+	sed -i "" -e "s/version:.*/version: $(VERSION)/" jxlabs-nos-resources/Chart.yaml
 
 else ifeq ($(OS),Linux)
-	sed -i -e "s/version:.*/version: $(VERSION)/" jxboot-helmfile-resources/Chart.yaml
+	sed -i -e "s/version:.*/version: $(VERSION)/" jxlabs-nos-resources/Chart.yaml
 else
 	exit -1
 endif
-	helm package jxboot-helmfile-resources
-	curl --fail -u $(CHARTMUSEUM_CREDS_USR):$(CHARTMUSEUM_CREDS_PSW) --data-binary "@$(NAME)-$(VERSION).tgz" $(CHART_REPO)/api/charts
-	rm -rf ${NAME}*.tgz
+	helm package --destination .cr-release-packages jxlabs-nos-resources
+	jx step tag --version=$(VERSION)
+	jx step changelog --no-dev-release --version=$(VERSION) --batch-mode
+	cr upload --config cr-config.yaml --token=$(GIT_TOKEN)
+	cr index  --config cr-config.yaml --token=$(GIT_TOKEN)
 
 
 test:
