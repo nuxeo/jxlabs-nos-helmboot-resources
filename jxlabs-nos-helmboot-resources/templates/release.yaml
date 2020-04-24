@@ -1,0 +1,14 @@
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2020-04-11T18:09:23Z"
+  deletionTimestamp: null
+  name: '{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}'
+spec:
+  gitCloneUrl: https://github.com/jenkins-x-charts/jxboot-helmfile-resources.git
+  gitHttpUrl: https://github.com/jenkins-x-charts/jxboot-helmfile-resources
+  gitOwner: jenkins-x-charts
+  gitRepository: jxboot-helmfile-resources
+  name: '{{ .Chart.Name }}'
+  version: 0.0.136-nxmatic
+status: {}
