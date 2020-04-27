@@ -1570,8 +1570,8 @@ jxRequirements:
   autoUpdate:
     enabled: false
     schedule: ""
-  bootConfigURL: https://github.com/jenkins-x/jxr-boot-config.git
-  buildPackURL: https://github.com/jenkins-x/jxr-packs-kubernetes.git
+  bootConfigURL: https://github.com/nxmatic/jxlabs-nos-helmboot-config.git
+  buildPackURL: https://github.com/nxmatoc/jxlabs-nos-buildpacks.git
   buildPackRef: master
   cluster:
     clustername: mycluster
@@ -1622,5 +1622,5 @@ jxRequirements:
       url: ""
   versionStream:
     ref: master
-    url: https://github.com/jenkins-x/jenkins-x-versions.git
-  webhook: lighthouse
+    url: https://github.com/nxmatic/jxlabs-nos-versions.git
+  webhook: prow
