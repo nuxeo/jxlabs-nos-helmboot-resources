@@ -2,6 +2,38 @@ apiVersion: v1
 entries:
   jxlabs-nos-helmboot-resources:
   - apiVersion: v1
+    created: "2020-04-27T15:01:19.404748+02:00"
+    dependencies:
+    - alias: gcactivities
+      name: jx
+      repository: http://chartmuseum.jenkins-x.io
+      version: 2.0.1143
+    - alias: gcpods
+      name: jx
+      repository: http://chartmuseum.jenkins-x.io
+      version: 2.0.1143
+    - alias: gcpreviews
+      name: jx
+      repository: http://chartmuseum.jenkins-x.io
+      version: 2.0.1143
+    - alias: controllerbuild
+      condition: controllerbuild.enabled
+      name: jx
+      repository: http://chartmuseum.jenkins-x.io
+      version: 2.0.1143
+    - alias: controllerrole
+      condition: controllerrole.enabled
+      name: jx
+      repository: http://chartmuseum.jenkins-x.io
+      version: 2.0.1143
+    description: A Helm chart for the resources for JX Boot
+    digest: 25b2bf92aec537c0c794a2743b60868cee79cbe18922a3057b0230e0b341b525
+    icon: https://avatars2.githubusercontent.com/u/47602533
+    name: jxlabs-nos-helmboot-resources
+    urls:
+    - https://github.com/nxmatic/jxlabs-nos-helmboot-resources/releases/download/jxlabs-nos-helmboot-resources-0.0.159-nos-2/jxlabs-nos-helmboot-resources-0.0.159-nos-2.tgz
+    version: 0.0.159-nos-2
+  - apiVersion: v1
     created: "2020-04-24T16:43:15.871118+02:00"
     dependencies:
     - alias: gcactivities
