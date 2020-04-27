@@ -1109,6 +1109,7 @@ podTemplates:
     JX-base:
       name: jx-base
       label: jenkins-jx-base
+      devPodPorts: 9999 # don't have any port but we need it for using jx create devpod, to-do open an issue
       envVars:
         GIT_COMMITTER_EMAIL: jenkins-x@googlegroups.com
         GIT_AUTHOR_EMAIL: jenkins-x@googlegroups.com
