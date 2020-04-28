@@ -1,0 +1,67 @@
+
+Showing logs for build [32mnxmatic-jxlabs-nos-helmboot-res-92b5d-9[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-nl7vs[0m
+{"level":"warn","ts":1588090103.2439356,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1588090103.2444704,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mnxmatic-jxlabs-nos-helmboot-res-92b5d-9[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-mcqz6[0m
+{"level":"warn","ts":1588090104.0412076,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1588090104.042499,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mnxmatic-jxlabs-nos-helmboot-res-92b5d-9[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mnxmatic-jxlabs-nos-helmboot-res-92b5d-9[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-nxmatic-jxlabs-nos-helmboot-res-92b5d-cwr4n[0m
+{"level":"warn","ts":1588090109.0774117,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1588090109.4883873,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*******/**labs-nos-helmboot-resources.git @ v0.0.166 in path /workspace/source"}
+
+Showing logs for build [32mnxmatic-jxlabs-nos-helmboot-res-92b5d-9[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:1555758486a0246269a2361a325638e3b18773d6
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mnxmatic-jxlabs-nos-helmboot-res-92b5d-9[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /builder/home/git/credentials
+
+Showing logs for build [32mnxmatic-jxlabs-nos-helmboot-res-92b5d-9[0m stage [32mfrom-build-pack[0m and container [32mstep-build-basic-auth-username[0m
+Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
+/builder/home/basic-auth-user.json
+
+Showing logs for build [32mnxmatic-jxlabs-nos-helmboot-res-92b5d-9[0m stage [32mfrom-build-pack[0m and container [32mstep-build-basic-auth-password[0m
+Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
+/builder/home/basic-auth-pass.json
+
+Showing logs for build [32mnxmatic-jxlabs-nos-helmboot-res-92b5d-9[0m stage [32mfrom-build-pack[0m and container [32mstep-build-release[0m
+rm -fr .bin .cr-*
+helm init --client-only
+Creating /workspace/source/.helm 
+Creating /workspace/source/.helm/repository 
+Creating /workspace/source/.helm/repository/cache 
+Creating /workspace/source/.helm/repository/local 
+Creating /workspace/source/.helm/plugins 
+Creating /workspace/source/.helm/starters 
+Creating /workspace/source/.helm/cache/archive 
+Creating /workspace/source/.helm/repository/repositories.yaml 
+Adding stable repo with URL: https://kubernetes-charts.storage.googleapis.com 
+Adding local repo with URL: http://127.0.0.1:8879/charts 
+$HELM_HOME has been configured at /workspace/source/.helm.
+Not installing Tiller due to 'client-only' flag having been set
+helm repo add jenkinsxio http://chartmuseum.jenkins-x.io
+"jenkinsxio" has been added to your repositories
+helm dependency build **labs-nos-helmboot-resources
+Hang tight while we grab the latest from your chart repositories...
+...Unable to get an update from the "local" chart repository (http://127.0.0.1:8879/charts):
+	Get http://127.0.0.1:8879/charts/index.yaml: dial tcp 127.0.0.1:8879: connect: connection refused
+...Successfully got an update from the "stable" chart repository
+...Successfully got an update from the "jenkinsxio" chart repository
+Update Complete.
+Saving 5 charts
+Downloading ** from repo http://chartmuseum.jenkins-x.io
+Downloading ** from repo http://chartmuseum.jenkins-x.io
+Downloading ** from repo http://chartmuseum.jenkins-x.io
+Downloading ** from repo http://chartmuseum.jenkins-x.io
+Downloading ** from repo http://chartmuseum.jenkins-x.io
+Deleting outdated charts
+helm lint **labs-nos-helmboot-resources
+==> Linting **labs-nos-helmboot-resources
+Lint OK
+
+1 chart(s) linted, no failures
+will run in github actions instead, can't attach the chart to the release
