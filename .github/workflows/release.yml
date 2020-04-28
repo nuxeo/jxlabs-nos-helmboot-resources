@@ -2,8 +2,10 @@ name: Release Charts
 
 on:
   push:
-    branches:
-      - master
+    branch:
+     - release-v0.0.0-165-nos
+    tags:
+      - v0.0.0-165-nos
 
 jobs:
   release:
