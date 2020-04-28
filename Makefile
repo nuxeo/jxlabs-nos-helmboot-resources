@@ -2,8 +2,9 @@ CHART_REPO := https://nxmatic.github.io/jxlabs-nos-helmboot-resources
 NAME := jxlabs-nos-helmboot-helmbootresources
 OS := $(shell uname)
 
+HELM_HOME ?= $(shell pwd)/.helm
 
-export HELM_HOME ?= $(shell pwd)/.helm
+export
 
 init:
 	helm init --client-only
@@ -35,29 +36,31 @@ clean:
 release: clean build release-nobuild 
 
 .bin/cr: | .bin
-	curl -L -s https://github.com/helm/chart-releaser/releases/download/v0.2.3/chart-releaser_0.2.3_linux_amd64.tar.gz | tar xvCfz .bin -
+	[ -x /usr/local/bin/cr ] && ln -s /usr/local/bin/cr .bin/cr || (curl -L -s https://github.com/helm/chart-releaser/releases/download/v0.2.3/chart-releaser_0.2.3_linux_amd64.tar.gz | tar xvCfz .bin -)
 
 .bin .cr-release-packages .cr-index:
 	mkdir $@
 
-export GIT_TOKEN
 
-release-nobuild: GIT_TOKEN ?= $(shell jx step credential --name=jx-pipeline-git-github-github --key=password)
-release-nobuild: | .bin/cr .cr-release-packages .cr-index
 release-nobuild:
-ifeq ($(OS),Darwin)
-	sed -i "" -e "s/version:.*/version: $(VERSION)/" jxlabs-nos-helmboot-resources/Chart.yaml
+	@echo "will run in github actions instead, can't attach the chart to the release"
 
-else ifeq ($(OS),Linux)
-	sed -i -e "s/version:.*/version: $(VERSION)/" jxlabs-nos-helmboot-resources/Chart.yaml
-else
-	exit -1
-endif
-	helm package --destination .cr-release-packages jxlabs-nos-helmboot-resources
+# release-nobuild: GIT_TOKEN ?= $(shell jx step credential --name=jx-pipeline-git-github-github --key=password)
+# release-nobuild: | .bin/cr .cr-release-packages .cr-index
+# release-nobuild:
+# ifeq ($(OS),Darwin)
+# 	sed -i "" -e "s/version:.*/version: $(VERSION)/" jxlabs-nos-helmboot-resources/Chart.yaml
+
+# else ifeq ($(OS),Linux)
+# 	sed -i -e "s/version:.*/version: $(VERSION)/" jxlabs-nos-helmboot-resources/Chart.yaml
+# else
+# 	exit -1
+# endif
+# 	helm package --destination .cr-release-packages jxlabs-nos-helmboot-resources
 #	jx step tag --version=$(VERSION)
 #	jx step changelog --no-dev-release --version=$(VERSION) --batch-mode
-	.bin/cr upload --config cr-config.yaml --token=$${GIT_TOKEN}
-	.bin/cr index  --config cr-config.yaml --token=$${GIT_TOKEN}
+#	.bin/cr upload --config cr-config.yaml --token=$${GIT_TOKEN}
+#	.bin/cr index  --config cr-config.yaml --token=$${GIT_TOKEN}
 
 
 test:
