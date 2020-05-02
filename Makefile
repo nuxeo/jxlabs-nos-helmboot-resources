@@ -15,17 +15,17 @@ setup: init
 build: setup build-nosetup
 
 build-nosetup: clean
-	helm dependency build jxlabs-nos-helmboot-resources
-	helm lint jxlabs-nos-helmboot-resources
+	cd charts && helm dependency build jxlabs-nos-helmboot-resources
+	cd charts && helm lint jxlabs-nos-helmboot-resources
 
 install: clean build
-	helm upgrade ${NAME} jxlabs-nos-helmboot-resources --install
+	cd charts && helm upgrade ${NAME} jxlabs-nos-helmboot-resources --install
 
 upgrade: clean build
-	helm upgrade ${NAME} jxlabs-nos-helmboot-resources --install
+	cd charts && helm upgrade ${NAME} jxlabs-nos-helmboot-resources --install
 
 delete:
-	helm delete --purge ${NAME} jxlabs-nos-helmboot-resources
+	cd charts && helm delete --purge ${NAME} jxlabs-nos-helmboot-resources
 
 clean:
 	rm -fr .bin .cr-*
@@ -42,26 +42,19 @@ release: clean build release-nobuild
 	mkdir $@
 
 
+release-nobuild: GIT_TOKEN := $(shell jx step credential --name=jx-pipeline-git-github-github --key=password)
+release-nobuild: | .bin/cr .cr-release-packages .cr-index
 release-nobuild:
-	@echo "will run in github actions instead, can't attach the chart to the release"
-
-# release-nobuild: GIT_TOKEN ?= $(shell jx step credential --name=jx-pipeline-git-github-github --key=password)
-# release-nobuild: | .bin/cr .cr-release-packages .cr-index
-# release-nobuild:
-# ifeq ($(OS),Darwin)
-# 	sed -i "" -e "s/version:.*/version: $(VERSION)/" jxlabs-nos-helmboot-resources/Chart.yaml
-
-# else ifeq ($(OS),Linux)
-# 	sed -i -e "s/version:.*/version: $(VERSION)/" jxlabs-nos-helmboot-resources/Chart.yaml
-# else
-# 	exit -1
-# endif
-# 	helm package --destination .cr-release-packages jxlabs-nos-helmboot-resources
-#	jx step tag --version=$(VERSION)
-#	jx step changelog --no-dev-release --version=$(VERSION) --batch-mode
-#	.bin/cr upload --config cr-config.yaml --token=$${GIT_TOKEN}
-#	.bin/cr index  --config cr-config.yaml --token=$${GIT_TOKEN}
-
+ifeq ($(OS),Darwin)
+	sed -i "" -e "s/version:.*/version: $(VERSION)/" charts/jxlabs-nos-helmboot-resources/Chart.yaml
+else ifeq ($(OS),Linux)
+	sed -i -e "s/version:.*/version: $(VERSION)/" charts/jxlabs-nos-helmboot-resources/Chart.yaml
+else
+	exit -1
+endif
+	cd charts && helm package --destination ../.cr-release-packages jxlabs-nos-helmboot-resources
+	.bin/cr upload --config cr-config.yaml --token=$${GIT_TOKEN}
+	.bin/cr index  --config cr-config.yaml --token=$${GIT_TOKEN}
 
 test:
 	cd tests && go test -v
