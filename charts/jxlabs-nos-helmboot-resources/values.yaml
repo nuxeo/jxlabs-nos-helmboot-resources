@@ -1570,8 +1570,8 @@ jxRequirements:
   autoUpdate:
     enabled: false
     schedule: ""
-  bootConfigURL: https://github.com/nxmatic/jxlabs-nos-helmboot-config.git
-  buildPackURL: https://github.com/nxmatoc/jxlabs-nos-buildpacks.git
+  bootConfigURL: https://github.com/nuxeo/jxlabs-nos-helmboot-config.git
+  buildPackURL: https://github.com/nuxeo/jxlabs-nos-buildpacks.git
   buildPackRef: master
   cluster:
     clustername: mycluster
