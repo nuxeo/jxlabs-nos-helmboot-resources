@@ -1,10 +1,9 @@
-CHART_REPO := https://nxmatic.github.io/jxlabs-nos-helmboot-resources
-NAME := jxlabs-nos-helmboot-helmbootresources
+CHART_REPO := http://jenkins-x-chartmuseum:8080
+NAME := jxboot-helmfile-resources
 OS := $(shell uname)
 
-HELM_HOME ?= $(shell pwd)/.helm
-
-export
+CHARTMUSEUM_CREDS_USR := $(shell cat /builder/home/basic-auth-user.json)
+CHARTMUSEUM_CREDS_PSW := $(shell cat /builder/home/basic-auth-pass.json)
 
 init:
 	helm init --client-only
@@ -15,46 +14,36 @@ setup: init
 build: setup build-nosetup
 
 build-nosetup: clean
-	cd charts && helm dependency build jxlabs-nos-helmboot-resources
-	cd charts && helm lint jxlabs-nos-helmboot-resources
+	helm dependency build jxboot-helmfile-resources
+	helm lint jxboot-helmfile-resources
 
 install: clean build
-	cd charts && helm upgrade ${NAME} jxlabs-nos-helmboot-resources --install
+	helm upgrade ${NAME} jxboot-helmfile-resources --install
 
 upgrade: clean build
-	cd charts && helm upgrade ${NAME} jxlabs-nos-helmboot-resources --install
+	helm upgrade ${NAME} jxboot-helmfile-resources --install
 
 delete:
-	cd charts && helm delete --purge ${NAME} jxlabs-nos-helmboot-resources
+	helm delete --purge ${NAME} jxboot-helmfile-resources
 
 clean:
-	rm -fr .bin .cr-*
-#	rm -rf jxlabs-nos-helmboot-resources/charts
-#	rm -rf jxlabs-nos-helmboot-resources/${NAME}*.tgz
-#	rm -rf jxlabs-nos-helmboot-resources/requirements.lock
+	rm -rf jxboot-helmfile-resources/charts
+	rm -rf jxboot-helmfile-resources/${NAME}*.tgz
+	rm -rf jxboot-helmfile-resources/requirements.lock
 
-release: clean build release-nobuild 
-
-.bin/cr: | .bin
-	[ -x /usr/local/bin/cr ] && ln -s /usr/local/bin/cr .bin/cr || (curl -L -s https://github.com/helm/chart-releaser/releases/download/v0.2.3/chart-releaser_0.2.3_linux_amd64.tar.gz | tar xvCfz .bin -)
-
-.bin .cr-release-packages .cr-index:
-	mkdir $@
-
-
-release-nobuild: GIT_TOKEN := $(shell jx step credential --name=jx-pipeline-git-github-github --key=password)
-release-nobuild: | .bin/cr .cr-release-packages .cr-index
-release-nobuild:
+release: clean build
 ifeq ($(OS),Darwin)
-	sed -i "" -e "s/version:.*/version: $(VERSION)/" charts/jxlabs-nos-helmboot-resources/Chart.yaml
+	sed -i "" -e "s/version:.*/version: $(VERSION)/" jxboot-helmfile-resources/Chart.yaml
+
 else ifeq ($(OS),Linux)
-	sed -i -e "s/version:.*/version: $(VERSION)/" charts/jxlabs-nos-helmboot-resources/Chart.yaml
+	sed -i -e "s/version:.*/version: $(VERSION)/" jxboot-helmfile-resources/Chart.yaml
 else
 	exit -1
 endif
-	cd charts && helm package --destination ../.cr-release-packages jxlabs-nos-helmboot-resources
-	.bin/cr upload --config cr-config.yaml --token=$${GIT_TOKEN}
-	.bin/cr index  --config cr-config.yaml --token=$${GIT_TOKEN}
+	helm package jxboot-helmfile-resources
+	curl --fail -u $(CHARTMUSEUM_CREDS_USR):$(CHARTMUSEUM_CREDS_PSW) --data-binary "@$(NAME)-$(VERSION).tgz" $(CHART_REPO)/api/charts
+	rm -rf ${NAME}*.tgz
+
 
 test:
 	cd tests && go test -v
