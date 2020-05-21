@@ -1,0 +1,42 @@
+
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-qpsbj-5[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-mwmlc[0m
+{"level":"info","ts":1590083474.0533347,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1590083474.0555634,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-qpsbj-5[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-xxv74[0m
+{"level":"info","ts":1590083475.021252,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1590083475.0236716,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-qpsbj-5[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-qpsbj-5[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-nuxeo-jxlabs-nos-helmboot-resou-qpsbj-xvw6m[0m
+{"level":"info","ts":1590083481.2860534,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1590083481.703881,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/nuxeo/**labs-nos-helmboot-resources.git @ v0.0.176-**labs-nos in path /workspace/source"}
+
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-qpsbj-5[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:bac3a5d5f4c96ca40489931118bc7aef166266e0
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-qpsbj-5[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /builder/home/git/credentials
+
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-qpsbj-5[0m stage [32mfrom-build-pack[0m and container [32mstep-build-basic-auth-username[0m
+Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
+/builder/home/basic-auth-user.json
+
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-qpsbj-5[0m stage [32mfrom-build-pack[0m and container [32mstep-build-basic-auth-password[0m
+Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
+/builder/home/basic-auth-pass.json
+
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-qpsbj-5[0m stage [32mfrom-build-pack[0m and container [32mstep-build-release[0m
+make: Entering directory `/workspace/source/charts/**labs-nos-helmboot-resources'
+rm -rf charts
+rm -rf **labs-nos-helmboot-resources*.tgz
+sed -i -e "s/version:.*/version: 0.0.176-**labs-nos/" Chart.yaml
+helm dependency build
+Error: Couldn't load repositories file (/builder/home/.helm/repository/repositories.yaml).
+You might need to run `helm init` (or `helm init --client-only` if tiller is already installed)
+make: *** [release] Error 1
+make: Leaving directory `/workspace/source/charts/**labs-nos-helmboot-resources'
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-release'. The execution of the pipeline has stopped.[0m
