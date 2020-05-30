@@ -1,33 +1,26 @@
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-td6gv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-rrsw5[0m
-{"level":"info","ts":1590279116.56177,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
-{"level":"info","ts":1590279116.5648596,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-jwgcg-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-f4f8s[0m
+{"level":"info","ts":1590852481.164415,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1590852481.1666396,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-td6gv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-mzp4r[0m
-{"level":"info","ts":1590279117.5801203,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
-{"level":"info","ts":1590279117.582645,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-jwgcg-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-jmxmr[0m
+{"level":"info","ts":1590852481.8498752,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1590852481.852536,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-td6gv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-jwgcg-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-td6gv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-nuxeo-jxlabs-nos-helmboot-resou-td6gv-tsrqv[0m
-{"level":"info","ts":1590279123.7804499,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
-{"level":"info","ts":1590279124.202176,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/nuxeo/**labs-nos-helmboot-resources.git @ v0.0.210-**labs-nos in path /workspace/source"}
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-jwgcg-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-nuxeo-jxlabs-nos-helmboot-resou-jwgcg-c9cbc[0m
+{"level":"info","ts":1590852574.009871,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1590852574.3917909,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/nuxeo/**labs-nos-helmboot-resources.git @ v0.0.213-**labs-nos in path /workspace/source"}
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-td6gv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
-Using SHAs from PULL_REFS=master:f954aaf5b1d85a2462dc688d1709e091556a3903
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-jwgcg-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:3b1fb2e1903385d5bcae5b6c8c4e6e6ab6941d3c
 WARNING: no SHAs to merge, falling back to initial cloned commit
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-td6gv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-jwgcg-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
 Generated Git credentials file /builder/home/git/credentials
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-td6gv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-basic-auth-username[0m
-Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
-/builder/home/basic-auth-user.json
-
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-td6gv-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-basic-auth-password[0m
-Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
-error: Invalid option: --key BASIC_AUTH_PASS
-Possible values: BASIC_AUTH_USER
-WARNING: Secret jenkins-x-chartmuseum in namespace ** does not have key BASIC_AUTH_PASS
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-jwgcg-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-basic-auth-username[0m
+error: failed to find Secret jenkins-x-chartmuseum in namespace **: secrets "jenkins-x-chartmuseum" not found
 [31m
-Pipeline failed on stage 'from-build-pack' : container 'step-build-basic-auth-password'. The execution of the pipeline has stopped.[0m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-basic-auth-username'. The execution of the pipeline has stopped.[0m
