@@ -1,34 +1,32 @@
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-g2lrd-3[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-b8mgf[0m
-{"level":"info","ts":1590282564.4382603,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
-{"level":"info","ts":1590282564.4408867,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-lrvn4-3[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-jkd8s[0m
+{"level":"info","ts":1591018257.0530121,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1591018257.0535247,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-g2lrd-3[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-458bt[0m
-{"level":"info","ts":1590282565.4328592,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
-{"level":"info","ts":1590282565.43427,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-lrvn4-3[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-znxl4[0m
+{"level":"info","ts":1591018257.4295018,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1591018257.4316564,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-g2lrd-3[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-lrvn4-3[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-g2lrd-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-nuxeo-jxlabs-nos-helmboot-resou-g2lrd-zs8zw[0m
-{"level":"info","ts":1590282570.596739,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
-{"level":"info","ts":1590282570.9711812,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/nuxeo/**labs-nos-helmboot-resources.git @ v0.0.212-**labs-nos in path /workspace/source"}
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-lrvn4-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-nuxeo-jxlabs-nos-helmboot-resou-lrvn4-z2nbp[0m
+{"level":"info","ts":1591018263.6003835,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1591018263.9745529,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/nuxeo/**labs-nos-helmboot-resources.git @ v0.0.215-**labs-nos in path /workspace/source"}
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-g2lrd-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
-Using SHAs from PULL_REFS=master:f954aaf5b1d85a2462dc688d1709e091556a3903
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-lrvn4-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:3b1fb2e1903385d5bcae5b6c8c4e6e6ab6941d3c
 WARNING: no SHAs to merge, falling back to initial cloned commit
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-g2lrd-3[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-lrvn4-3[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
 Generated Git credentials file /builder/home/git/credentials
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-g2lrd-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-basic-auth-username[0m
-Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-lrvn4-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-basic-auth-username[0m
 /builder/home/basic-auth-user.json
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-g2lrd-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-basic-auth-password[0m
-Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-lrvn4-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-basic-auth-password[0m
 /builder/home/basic-auth-pass.json
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-g2lrd-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-release[0m
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-lrvn4-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-release[0m
 make: Entering directory `/workspace/source/charts/**labs-nos-helmboot-resources'
 helm init --client-only
 Creating /builder/home/.helm 
@@ -50,7 +48,7 @@ helm repo add jenkinsxio http://chartmuseum.jenkins-x.io
 "jenkinsxio" has been added to your repositories
 rm -rf charts
 rm -rf **labs-nos-helmboot-resources*.tgz
-sed -i -e "s/version:.*/version: 0.0.212-**labs-nos/" Chart.yaml
+sed -i -e "s/version:.*/version: 0.0.215-**labs-nos/" Chart.yaml
 helm dependency build
 Hang tight while we grab the latest from your chart repositories...
 ...Unable to get an update from the "local" chart repository (http://127.0.0.1:8879/charts):
@@ -71,14 +69,14 @@ Lint OK
 
 1 chart(s) linted, no failures
 helm package .
-Successfully packaged chart and saved it to: /workspace/source/charts/**labs-nos-helmboot-resources/**labs-nos-helmboot-resources-0.0.212-**labs-nos.tgz
+Successfully packaged chart and saved it to: /workspace/source/charts/**labs-nos-helmboot-resources/**labs-nos-helmboot-resources-0.0.215-**labs-nos.tgz
 helm gcs push **labs-nos-helmboot-resources*.tgz gs://**labs-nos-charts
-Copying file:///tmp/tmp.jjur4ZGDeJ/repo/index.yaml [Content-Type=application/octet-stream]...
-/ [0 files][    0.0 B/  8.2 KiB]                                                / [1 files][  8.2 KiB/  8.2 KiB]                                                
-Operation completed over 1 objects/8.2 KiB.                                      
-Copying file:///tmp/tmp.jjur4ZGDeJ/repo/**labs-nos-helmboot-resources-0.0.212-**labs-nos.tgz [Content-Type=application/x-tar]...
-/ [0 files][    0.0 B/ 16.8 KiB]                                                / [1 files][ 16.8 KiB/ 16.8 KiB]                                                
-Operation completed over 1 objects/16.8 KiB.                                     
+Copying file:///tmp/tmp.83Hc1V0mGO/repo/index.yaml [Content-Type=application/octet-stream]...
+/ [0 files][    0.0 B/ 12.5 KiB]                                                / [1 files][ 12.5 KiB/ 12.5 KiB]                                                
+Operation completed over 1 objects/12.5 KiB.                                     
+Copying file:///tmp/tmp.83Hc1V0mGO/repo/**labs-nos-helmboot-resources-0.0.215-**labs-nos.tgz [Content-Type=application/x-tar]...
+/ [0 files][    0.0 B/ 16.7 KiB]                                                / [1 files][ 16.7 KiB/ 16.7 KiB]                                                
+Operation completed over 1 objects/16.7 KiB.                                     
 Repository initialized...
 rm -rf **labs-nos-helmboot-resources*.tgz%
 make: Leaving directory `/workspace/source/charts/**labs-nos-helmboot-resources'
