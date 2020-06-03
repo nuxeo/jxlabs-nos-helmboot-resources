@@ -1,0 +1,349 @@
+
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-ng5k4-21[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-jd9c2[0m
+{"level":"info","ts":1591177666.2856894,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1591177666.2868204,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-ng5k4-21[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-hscmr[0m
+{"level":"info","ts":1591177666.596253,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1591177666.598149,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-ng5k4-21[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-ng5k4-21[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-nuxeo-jxlabs-nos-helmboot-ng5k4-7fgtr[0m
+{"level":"info","ts":1591177671.7423518,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1591177672.135427,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/nuxeo/**labs-nos-helmboot-resources.git @ 2bfbcc2eb5f4fba3ecbfadd1b4d4a32824c472d6 in path /workspace/source"}
+
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-ng5k4-21[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:2bfbcc2eb5f4fba3ecbfadd1b4d4a32824c472d6
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-ng5k4-21[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-ng5k4-21[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Cloning the Jenkins X versions repo https://github.com/nuxeo/**labs-nos-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+Effective pipeline written to jenkins-x-effective.yml
+
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-ng5k4-21[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+running command: /workspace/source/next-version.sh
+++ git fetch origin
+From https://github.com/nuxeo/**labs-nos-helmboot-resources
+ * [new branch]      changes                -> origin/changes
+ * [new branch]      gh-pages               -> origin/gh-pages
+ * [new branch]      **labs-nos             -> origin/**labs-nos
+ * [new branch]      **labs-nos-staging     -> origin/**labs-nos-staging
+ * [new branch]      master                 -> origin/master
+ * [new branch]      release-v0.0.0-165-nos -> origin/release-v0.0.0-165-nos
+++ git fetch origin --tags
+From https://github.com/nuxeo/**labs-nos-helmboot-resources
+ * [new tag]         v0.0.212   -> v0.0.212
+++ git remote add jenkins-x https://github.com/jenkins-x-charts/**boot-helmfile-resources
+++ git fetch jenkins-x
+From https://github.com/jenkins-x-charts/**boot-helmfile-resources
+ * [new branch]      changes           -> jenkins-x/changes
+ * [new branch]      changes2          -> jenkins-x/changes2
+ * [new branch]      jstrachan-patch-1 -> jenkins-x/jstrachan-patch-1
+ * [new branch]      master            -> jenkins-x/master
+++ git fetch jenkins-x --tags
+From https://github.com/jenkins-x-charts/**boot-helmfile-resources
+ * [new tag]         v0.0.1     -> v0.0.1
+ * [new tag]         v0.0.10    -> v0.0.10
+ * [new tag]         v0.0.100   -> v0.0.100
+ * [new tag]         v0.0.101   -> v0.0.101
+ * [new tag]         v0.0.102   -> v0.0.102
+ * [new tag]         v0.0.103   -> v0.0.103
+ * [new tag]         v0.0.104   -> v0.0.104
+ * [new tag]         v0.0.105   -> v0.0.105
+ * [new tag]         v0.0.106   -> v0.0.106
+ * [new tag]         v0.0.107   -> v0.0.107
+ * [new tag]         v0.0.108   -> v0.0.108
+ * [new tag]         v0.0.109   -> v0.0.109
+ * [new tag]         v0.0.11    -> v0.0.11
+ * [new tag]         v0.0.110   -> v0.0.110
+ * [new tag]         v0.0.111   -> v0.0.111
+ * [new tag]         v0.0.112   -> v0.0.112
+ * [new tag]         v0.0.113   -> v0.0.113
+ * [new tag]         v0.0.114   -> v0.0.114
+ * [new tag]         v0.0.115   -> v0.0.115
+ * [new tag]         v0.0.116   -> v0.0.116
+ * [new tag]         v0.0.117   -> v0.0.117
+ * [new tag]         v0.0.118   -> v0.0.118
+ * [new tag]         v0.0.119   -> v0.0.119
+ * [new tag]         v0.0.12    -> v0.0.12
+ * [new tag]         v0.0.120   -> v0.0.120
+ * [new tag]         v0.0.121   -> v0.0.121
+ * [new tag]         v0.0.122   -> v0.0.122
+ * [new tag]         v0.0.123   -> v0.0.123
+ * [new tag]         v0.0.124   -> v0.0.124
+ * [new tag]         v0.0.125   -> v0.0.125
+ * [new tag]         v0.0.126   -> v0.0.126
+ * [new tag]         v0.0.127   -> v0.0.127
+ * [new tag]         v0.0.128   -> v0.0.128
+ * [new tag]         v0.0.129   -> v0.0.129
+ * [new tag]         v0.0.13    -> v0.0.13
+ * [new tag]         v0.0.130   -> v0.0.130
+ * [new tag]         v0.0.131   -> v0.0.131
+ * [new tag]         v0.0.132   -> v0.0.132
+ * [new tag]         v0.0.133   -> v0.0.133
+ * [new tag]         v0.0.134   -> v0.0.134
+ * [new tag]         v0.0.135   -> v0.0.135
+ * [new tag]         v0.0.136   -> v0.0.136
+ * [new tag]         v0.0.137   -> v0.0.137
+ * [new tag]         v0.0.138   -> v0.0.138
+ * [new tag]         v0.0.139   -> v0.0.139
+ * [new tag]         v0.0.14    -> v0.0.14
+ * [new tag]         v0.0.140   -> v0.0.140
+ * [new tag]         v0.0.141   -> v0.0.141
+ * [new tag]         v0.0.142   -> v0.0.142
+ * [new tag]         v0.0.143   -> v0.0.143
+ * [new tag]         v0.0.144   -> v0.0.144
+ * [new tag]         v0.0.145   -> v0.0.145
+ * [new tag]         v0.0.146   -> v0.0.146
+ * [new tag]         v0.0.147   -> v0.0.147
+ * [new tag]         v0.0.148   -> v0.0.148
+ * [new tag]         v0.0.149   -> v0.0.149
+ * [new tag]         v0.0.15    -> v0.0.15
+ * [new tag]         v0.0.150   -> v0.0.150
+ * [new tag]         v0.0.151   -> v0.0.151
+ * [new tag]         v0.0.152   -> v0.0.152
+ * [new tag]         v0.0.153   -> v0.0.153
+ * [new tag]         v0.0.154   -> v0.0.154
+ * [new tag]         v0.0.155   -> v0.0.155
+ * [new tag]         v0.0.156   -> v0.0.156
+ * [new tag]         v0.0.157   -> v0.0.157
+ * [new tag]         v0.0.158   -> v0.0.158
+ * [new tag]         v0.0.159   -> v0.0.159
+ * [new tag]         v0.0.16    -> v0.0.16
+ * [new tag]         v0.0.160   -> v0.0.160
+ * [new tag]         v0.0.161   -> v0.0.161
+ * [new tag]         v0.0.162   -> v0.0.162
+ * [new tag]         v0.0.163   -> v0.0.163
+ * [new tag]         v0.0.164   -> v0.0.164
+ * [new tag]         v0.0.165   -> v0.0.165
+ * [new tag]         v0.0.166   -> v0.0.166
+ * [new tag]         v0.0.167   -> v0.0.167
+ * [new tag]         v0.0.168   -> v0.0.168
+ * [new tag]         v0.0.169   -> v0.0.169
+ * [new tag]         v0.0.17    -> v0.0.17
+ * [new tag]         v0.0.170   -> v0.0.170
+ * [new tag]         v0.0.171   -> v0.0.171
+ * [new tag]         v0.0.172   -> v0.0.172
+ * [new tag]         v0.0.173   -> v0.0.173
+ * [new tag]         v0.0.174   -> v0.0.174
+ * [new tag]         v0.0.175   -> v0.0.175
+ * [new tag]         v0.0.176   -> v0.0.176
+ * [new tag]         v0.0.177   -> v0.0.177
+ * [new tag]         v0.0.178   -> v0.0.178
+ * [new tag]         v0.0.179   -> v0.0.179
+ * [new tag]         v0.0.18    -> v0.0.18
+ * [new tag]         v0.0.180   -> v0.0.180
+ * [new tag]         v0.0.181   -> v0.0.181
+ * [new tag]         v0.0.182   -> v0.0.182
+ * [new tag]         v0.0.183   -> v0.0.183
+ * [new tag]         v0.0.184   -> v0.0.184
+ * [new tag]         v0.0.185   -> v0.0.185
+ * [new tag]         v0.0.186   -> v0.0.186
+ * [new tag]         v0.0.187   -> v0.0.187
+ * [new tag]         v0.0.188   -> v0.0.188
+ * [new tag]         v0.0.189   -> v0.0.189
+ * [new tag]         v0.0.19    -> v0.0.19
+ * [new tag]         v0.0.190   -> v0.0.190
+ * [new tag]         v0.0.191   -> v0.0.191
+ * [new tag]         v0.0.192   -> v0.0.192
+ * [new tag]         v0.0.193   -> v0.0.193
+ * [new tag]         v0.0.194   -> v0.0.194
+ * [new tag]         v0.0.195   -> v0.0.195
+ * [new tag]         v0.0.196   -> v0.0.196
+ * [new tag]         v0.0.197   -> v0.0.197
+ * [new tag]         v0.0.198   -> v0.0.198
+ * [new tag]         v0.0.199   -> v0.0.199
+ * [new tag]         v0.0.2     -> v0.0.2
+ * [new tag]         v0.0.20    -> v0.0.20
+ * [new tag]         v0.0.200   -> v0.0.200
+ * [new tag]         v0.0.201   -> v0.0.201
+ * [new tag]         v0.0.202   -> v0.0.202
+ * [new tag]         v0.0.203   -> v0.0.203
+ * [new tag]         v0.0.204   -> v0.0.204
+ * [new tag]         v0.0.205   -> v0.0.205
+ * [new tag]         v0.0.206   -> v0.0.206
+ * [new tag]         v0.0.207   -> v0.0.207
+ * [new tag]         v0.0.208   -> v0.0.208
+ * [new tag]         v0.0.209   -> v0.0.209
+ * [new tag]         v0.0.21    -> v0.0.21
+ * [new tag]         v0.0.210   -> v0.0.210
+ * [new tag]         v0.0.211   -> v0.0.211
+ * [new tag]         v0.0.22    -> v0.0.22
+ * [new tag]         v0.0.23    -> v0.0.23
+ * [new tag]         v0.0.24    -> v0.0.24
+ * [new tag]         v0.0.25    -> v0.0.25
+ * [new tag]         v0.0.26    -> v0.0.26
+ * [new tag]         v0.0.27    -> v0.0.27
+ * [new tag]         v0.0.28    -> v0.0.28
+ * [new tag]         v0.0.29    -> v0.0.29
+ * [new tag]         v0.0.3     -> v0.0.3
+ * [new tag]         v0.0.30    -> v0.0.30
+ * [new tag]         v0.0.31    -> v0.0.31
+ * [new tag]         v0.0.32    -> v0.0.32
+ * [new tag]         v0.0.33    -> v0.0.33
+ * [new tag]         v0.0.34    -> v0.0.34
+ * [new tag]         v0.0.35    -> v0.0.35
+ * [new tag]         v0.0.36    -> v0.0.36
+ * [new tag]         v0.0.37    -> v0.0.37
+ * [new tag]         v0.0.38    -> v0.0.38
+ * [new tag]         v0.0.39    -> v0.0.39
+ * [new tag]         v0.0.4     -> v0.0.4
+ * [new tag]         v0.0.40    -> v0.0.40
+ * [new tag]         v0.0.41    -> v0.0.41
+ * [new tag]         v0.0.42    -> v0.0.42
+ * [new tag]         v0.0.43    -> v0.0.43
+ * [new tag]         v0.0.44    -> v0.0.44
+ * [new tag]         v0.0.45    -> v0.0.45
+ * [new tag]         v0.0.46    -> v0.0.46
+ * [new tag]         v0.0.47    -> v0.0.47
+ * [new tag]         v0.0.48    -> v0.0.48
+ * [new tag]         v0.0.49    -> v0.0.49
+ * [new tag]         v0.0.5     -> v0.0.5
+ * [new tag]         v0.0.50    -> v0.0.50
+ * [new tag]         v0.0.51    -> v0.0.51
+ * [new tag]         v0.0.52    -> v0.0.52
+ * [new tag]         v0.0.53    -> v0.0.53
+ * [new tag]         v0.0.54    -> v0.0.54
+ * [new tag]         v0.0.55    -> v0.0.55
+ * [new tag]         v0.0.56    -> v0.0.56
+ * [new tag]         v0.0.57    -> v0.0.57
+ * [new tag]         v0.0.58    -> v0.0.58
+ * [new tag]         v0.0.59    -> v0.0.59
+ * [new tag]         v0.0.6     -> v0.0.6
+ * [new tag]         v0.0.60    -> v0.0.60
+ * [new tag]         v0.0.61    -> v0.0.61
+ * [new tag]         v0.0.62    -> v0.0.62
+ * [new tag]         v0.0.63    -> v0.0.63
+ * [new tag]         v0.0.64    -> v0.0.64
+ * [new tag]         v0.0.65    -> v0.0.65
+ * [new tag]         v0.0.66    -> v0.0.66
+ * [new tag]         v0.0.67    -> v0.0.67
+ * [new tag]         v0.0.68    -> v0.0.68
+ * [new tag]         v0.0.69    -> v0.0.69
+ * [new tag]         v0.0.7     -> v0.0.7
+ * [new tag]         v0.0.70    -> v0.0.70
+ * [new tag]         v0.0.71    -> v0.0.71
+ * [new tag]         v0.0.72    -> v0.0.72
+ * [new tag]         v0.0.73    -> v0.0.73
+ * [new tag]         v0.0.74    -> v0.0.74
+ * [new tag]         v0.0.75    -> v0.0.75
+ * [new tag]         v0.0.76    -> v0.0.76
+ * [new tag]         v0.0.77    -> v0.0.77
+ * [new tag]         v0.0.78    -> v0.0.78
+ * [new tag]         v0.0.79    -> v0.0.79
+ * [new tag]         v0.0.8     -> v0.0.8
+ * [new tag]         v0.0.80    -> v0.0.80
+ * [new tag]         v0.0.81    -> v0.0.81
+ * [new tag]         v0.0.82    -> v0.0.82
+ * [new tag]         v0.0.83    -> v0.0.83
+ * [new tag]         v0.0.84    -> v0.0.84
+ * [new tag]         v0.0.85    -> v0.0.85
+ * [new tag]         v0.0.86    -> v0.0.86
+ * [new tag]         v0.0.87    -> v0.0.87
+ * [new tag]         v0.0.88    -> v0.0.88
+ * [new tag]         v0.0.89    -> v0.0.89
+ * [new tag]         v0.0.9     -> v0.0.9
+ * [new tag]         v0.0.90    -> v0.0.90
+ * [new tag]         v0.0.91    -> v0.0.91
+ * [new tag]         v0.0.92    -> v0.0.92
+ * [new tag]         v0.0.93    -> v0.0.93
+ * [new tag]         v0.0.94    -> v0.0.94
+ * [new tag]         v0.0.95    -> v0.0.95
+ * [new tag]         v0.0.96    -> v0.0.96
+ * [new tag]         v0.0.97    -> v0.0.97
+ * [new tag]         v0.0.98    -> v0.0.98
+ * [new tag]         v0.0.99    -> v0.0.99
++++ git describe --abbrev=0 '--match=v[0-9]*.[0-9]*.[0-9]*'
+fatal: No tags can describe '2bfbcc2eb5f4fba3ecbfadd1b4d4a32824c472d6'.
+Try --always, or create some tags.
+++ up=
+++ : 'v\(.*\)'
++++ git describe --abbrev=0 --tags '--match=-**labs-nos-[0-9]*'
+++ last=
+++ '[' 128 -eq 0 ']'
+++ next=1
+++ version=-**labs-nos-1
++++ expr -**labs-nos-1 : 'v\(.*\)'
+++ echo
+++ git tag -**labs-nos-1
+error: unknown switch `j'
+usage: git tag [-a | -s | -u <key-id>] [-f] [-m <msg> | -F <file>] <tagname> [<head>]
+   or: git tag -d <tagname>...
+   or: git tag -l [-n[<num>]] [--contains <commit>] [--no-contains <commit>] [--points-at <object>]
+		[--format=<format>] [--[no-]merged [<commit>]] [<pattern>...]
+   or: git tag -v [--format=<format>] <tagname>...
+
+    -l, --list            list tag names
+    -n[<n>]               print <n> lines of each tag message
+    -d, --delete          delete tags
+    -v, --verify          verify tags
+
+Tag creation options
+    -a, --annotate        annotated tag, needs a message
+    -m, --message <message>
+                          tag message
+    -F, --file <file>     read message from file
+    -e, --edit            force edit of tag message
+    -s, --sign            annotated and GPG-signed tag
+    --cleanup <mode>      how to strip spaces and #comments from message
+    -u, --local-user <key-id>
+                          use another key to sign the tag
+    -f, --force           replace the tag if exists
+    --create-reflog       create a reflog
+
+Tag listing options
+    --column[=<style>]    show tag list in columns
+    --contains <commit>   print only tags that contain the commit
+    --no-contains <commit>
+                          print only tags that don't contain the commit
+    --merged <commit>     print only tags that are merged
+    --no-merged <commit>  print only tags that are not merged
+    --sort <key>          field name to sort on
+    --points-at <object>  print only tags of the object
+    --format <format>     format to use for the output
+    --color[=<when>]      respect format colors
+    -i, --ignore-case     sorting and filtering are case insensitive
+
+++ git push origin -**labs-nos-1
+error: unknown switch `j'
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --repo <repository>   repository
+    --all                 push all refs
+    --mirror              mirror all refs
+    -d, --delete          delete refs
+    --tags                push tags (can't be used with --all or --mirror)
+    -n, --dry-run         dry run
+    --porcelain           machine-readable output
+    -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --recurse-submodules[=(check|on-demand|no)]
+                          control recursive pushing of submodules
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+    --exec <receive-pack>
+                          receive pack program
+    -u, --set-upstream    set upstream for git pull/status
+    --progress            force progress reporting
+    --prune               prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --follow-tags         push missing but relevant tags
+    --signed[=(yes|no|if-asked)]
+                          GPG sign the push
+    --atomic              request atomic transaction on remote side
+    -o, --push-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+error: failed to set the version on release pipelines: failed to run '/bin/sh -c /workspace/source/next-version.sh' command in directory '/workspace/source', output: ''
+[31m
+Pipeline failed on stage 'meta-pipeline' : container 'step-create-tekton-crds'. The execution of the pipeline has stopped.[0m
