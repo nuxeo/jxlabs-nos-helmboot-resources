@@ -1,0 +1,127 @@
+
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-2vpgk-22[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-5sn76[0m
+{"level":"info","ts":1591177790.5998287,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1591177790.601702,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-2vpgk-22[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-v5xdp[0m
+{"level":"info","ts":1591177791.5686338,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1591177791.5703957,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-2vpgk-22[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-2vpgk-22[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-nuxeo-jxlabs-nos-helmboot-2vpgk-b66jv[0m
+{"level":"info","ts":1591177797.6963465,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1591177798.085504,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/nuxeo/**labs-nos-helmboot-resources.git @ f04499aba15f6f82e9343efeffe0b3fdb9ef8c18 in path /workspace/source"}
+
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-2vpgk-22[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:f04499aba15f6f82e9343efeffe0b3fdb9ef8c18
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-2vpgk-22[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-2vpgk-22[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Cloning the Jenkins X versions repo https://github.com/nuxeo/**labs-nos-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+Effective pipeline written to jenkins-x-release-effective.yml
+
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-2vpgk-22[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+running command: /workspace/source/next-version.sh
+++ git fetch origin --tags
+From https://github.com/nuxeo/**labs-nos-helmboot-resources
+ * [new branch]      changes                -> origin/changes
+ * [new branch]      gh-pages               -> origin/gh-pages
+ * [new branch]      **labs-nos             -> origin/**labs-nos
+ * [new branch]      **labs-nos-staging     -> origin/**labs-nos-staging
+ * [new branch]      master                 -> origin/master
+ * [new branch]      release-v0.0.0-165-nos -> origin/release-v0.0.0-165-nos
+ * [new tag]         v0.0.212               -> v0.0.212
++++ git describe --abbrev=0 '--match=v[0-9]*.[0-9]*.[0-9]*'
+fatal: No tags can describe 'f04499aba15f6f82e9343efeffe0b3fdb9ef8c18'.
+Try --always, or create some tags.
+++ up=
+++ : 'v\(.*\)'
++++ git describe --abbrev=0 --tags '--match=-**labs-nos-[0-9]*'
+++ last=
+++ '[' 128 -eq 0 ']'
+++ next=1
+++ version=-**labs-nos-1
++++ expr -**labs-nos-1 : 'v\(.*\)'
+++ echo
+++ git tag -**labs-nos-1
+error: unknown switch `j'
+usage: git tag [-a | -s | -u <key-id>] [-f] [-m <msg> | -F <file>] <tagname> [<head>]
+   or: git tag -d <tagname>...
+   or: git tag -l [-n[<num>]] [--contains <commit>] [--no-contains <commit>] [--points-at <object>]
+		[--format=<format>] [--[no-]merged [<commit>]] [<pattern>...]
+   or: git tag -v [--format=<format>] <tagname>...
+
+    -l, --list            list tag names
+    -n[<n>]               print <n> lines of each tag message
+    -d, --delete          delete tags
+    -v, --verify          verify tags
+
+Tag creation options
+    -a, --annotate        annotated tag, needs a message
+    -m, --message <message>
+                          tag message
+    -F, --file <file>     read message from file
+    -e, --edit            force edit of tag message
+    -s, --sign            annotated and GPG-signed tag
+    --cleanup <mode>      how to strip spaces and #comments from message
+    -u, --local-user <key-id>
+                          use another key to sign the tag
+    -f, --force           replace the tag if exists
+    --create-reflog       create a reflog
+
+Tag listing options
+    --column[=<style>]    show tag list in columns
+    --contains <commit>   print only tags that contain the commit
+    --no-contains <commit>
+                          print only tags that don't contain the commit
+    --merged <commit>     print only tags that are merged
+    --no-merged <commit>  print only tags that are not merged
+    --sort <key>          field name to sort on
+    --points-at <object>  print only tags of the object
+    --format <format>     format to use for the output
+    --color[=<when>]      respect format colors
+    -i, --ignore-case     sorting and filtering are case insensitive
+
+++ git push origin -**labs-nos-1
+error: unknown switch `j'
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --repo <repository>   repository
+    --all                 push all refs
+    --mirror              mirror all refs
+    -d, --delete          delete refs
+    --tags                push tags (can't be used with --all or --mirror)
+    -n, --dry-run         dry run
+    --porcelain           machine-readable output
+    -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --recurse-submodules[=(check|on-demand|no)]
+                          control recursive pushing of submodules
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+    --exec <receive-pack>
+                          receive pack program
+    -u, --set-upstream    set upstream for git pull/status
+    --progress            force progress reporting
+    --prune               prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --follow-tags         push missing but relevant tags
+    --signed[=(yes|no|if-asked)]
+                          GPG sign the push
+    --atomic              request atomic transaction on remote side
+    -o, --push-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+error: failed to set the version on release pipelines: failed to run '/bin/sh -c /workspace/source/next-version.sh' command in directory '/workspace/source', output: ''
+[31m
+Pipeline failed on stage 'meta-pipeline' : container 'step-create-tekton-crds'. The execution of the pipeline has stopped.[0m
