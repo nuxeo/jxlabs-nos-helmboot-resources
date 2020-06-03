@@ -1,32 +1,32 @@
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-h5tff-6[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-28fvr[0m
-{"level":"info","ts":1591171648.7297094,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
-{"level":"info","ts":1591171648.7324853,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-bgfc8-6[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-knt5w[0m
+{"level":"info","ts":1591172023.673545,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1591172023.6739743,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-h5tff-6[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-8wlsx[0m
-{"level":"info","ts":1591171649.2528746,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
-{"level":"info","ts":1591171649.2544074,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-bgfc8-6[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-rmgn9[0m
+{"level":"info","ts":1591172023.9827888,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1591172023.9839187,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-h5tff-6[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-bgfc8-6[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-h5tff-6[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-nuxeo-jxlabs-nos-helmboot-resou-h5tff-lcrv4[0m
-{"level":"info","ts":1591171654.4006577,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
-{"level":"info","ts":1591171654.8431463,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/nuxeo/**labs-nos-helmboot-resources.git @ v0.0.212-**labs-nos-helm-x in path /workspace/source"}
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-bgfc8-6[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-nuxeo-jxlabs-nos-helmboot-resou-bgfc8-vt9vt[0m
+{"level":"info","ts":1591172030.200081,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1591172030.565363,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/nuxeo/**labs-nos-helmboot-resources.git @ v0.0.212-**labs-nos-helm-x in path /workspace/source"}
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-h5tff-6[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-bgfc8-6[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
 Using SHAs from PULL_REFS=master:04ae2afef899952f8ba53dcb1452704fe763f825
 WARNING: no SHAs to merge, falling back to initial cloned commit
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-h5tff-6[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-bgfc8-6[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
 Generated Git credentials file /builder/home/git/credentials
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-h5tff-6[0m stage [32mfrom-build-pack[0m and container [32mstep-build-basic-auth-username[0m
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-bgfc8-6[0m stage [32mfrom-build-pack[0m and container [32mstep-build-basic-auth-username[0m
 /builder/home/basic-auth-user.json
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-h5tff-6[0m stage [32mfrom-build-pack[0m and container [32mstep-build-basic-auth-password[0m
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-bgfc8-6[0m stage [32mfrom-build-pack[0m and container [32mstep-build-basic-auth-password[0m
 /builder/home/basic-auth-pass.json
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-h5tff-6[0m stage [32mfrom-build-pack[0m and container [32mstep-build-release[0m
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-bgfc8-6[0m stage [32mfrom-build-pack[0m and container [32mstep-build-release[0m
 make: Entering directory `/workspace/source/charts/**labs-nos-helmboot-resources'
 echo v2.12.2
 v2.12.2
@@ -92,9 +92,9 @@ helm package .
 Successfully packaged chart and saved it to: /workspace/source/charts/**labs-nos-helmboot-resources/**labs-nos-helmboot-resources-0.0.212-**labs-nos-helm-x.tgz
 helm gcs push **labs-nos-helmboot-resources-0.0.212-**labs-nos-helm-x.tgz gs://**labs-nos-charts
 Error: repo entry: load repo file: couldn't load repositories file (/builder/home/.config/helm/repositories.yaml): open /builder/home/.config/helm/repositories.yaml: no such file or directory
-repo entry: load repo file: couldn't load repositories file (/builder/home/.config/helm/repositories.yaml): open /builder/home/.config/helm/repositories.yaml: no such file or directory
 Usage:
   helm-gcs push [chart.tar.gz] [repository] [flags]
+repo entry: load repo file: couldn't load repositories file (/builder/home/.config/helm/repositories.yaml): open /builder/home/.config/helm/repositories.yaml: no such file or directory
 
 Flags:
       --force              upload the chart even if already indexed
