@@ -1,32 +1,32 @@
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-jb452-10[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-79ss5[0m
-{"level":"info","ts":1591172819.5737538,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
-{"level":"info","ts":1591172819.5786762,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-rs89g-10[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-lh29b[0m
+{"level":"info","ts":1591173280.1535718,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1591173280.1565568,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-jb452-10[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-f8xv2[0m
-{"level":"info","ts":1591172820.8683963,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
-{"level":"info","ts":1591172820.8698173,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-rs89g-10[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-lc9mm[0m
+{"level":"info","ts":1591173281.4924946,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1591173281.4947808,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-jb452-10[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-rs89g-10[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-jb452-10[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-nuxeo-jxlabs-nos-helmboot-resou-jb452-nrvng[0m
-{"level":"info","ts":1591172826.9951947,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
-{"level":"info","ts":1591172827.3935409,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/nuxeo/**labs-nos-helmboot-resources.git @ v0.0.212-**labs-nos-helm-x in path /workspace/source"}
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-rs89g-10[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-nuxeo-jxlabs-nos-helmboot-resou-rs89g-nsq66[0m
+{"level":"info","ts":1591173286.6364894,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1591173287.0026948,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/nuxeo/**labs-nos-helmboot-resources.git @ v0.0.212-**labs-nos-helm-x in path /workspace/source"}
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-jb452-10[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
-Using SHAs from PULL_REFS=master:6e8cdcdd86ed8875a12f42d7f4d321b717027b95
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-rs89g-10[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:3ab9cd3594b137705cbd4b4e8116a323685a128a
 WARNING: no SHAs to merge, falling back to initial cloned commit
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-jb452-10[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-rs89g-10[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
 Generated Git credentials file /builder/home/git/credentials
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-jb452-10[0m stage [32mfrom-build-pack[0m and container [32mstep-build-basic-auth-username[0m
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-rs89g-10[0m stage [32mfrom-build-pack[0m and container [32mstep-build-basic-auth-username[0m
 /builder/home/basic-auth-user.json
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-jb452-10[0m stage [32mfrom-build-pack[0m and container [32mstep-build-basic-auth-password[0m
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-rs89g-10[0m stage [32mfrom-build-pack[0m and container [32mstep-build-basic-auth-password[0m
 /builder/home/basic-auth-pass.json
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-jb452-10[0m stage [32mfrom-build-pack[0m and container [32mstep-build-release[0m
+Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-rs89g-10[0m stage [32mfrom-build-pack[0m and container [32mstep-build-release[0m
 make: Entering directory `/workspace/source/charts/**labs-nos-helmboot-resources'
 helm init --client-only
 Creating /builder/home/.helm 
@@ -91,8 +91,9 @@ Lint OK
 1 chart(s) linted, no failures
 helm package .
 Successfully packaged chart and saved it to: /workspace/source/charts/**labs-nos-helmboot-resources/**labs-nos-helmboot-resources-0.0.212-**labs-nos-helm-x.tgz
-helm gcs push **labs-nos-helmboot-resources-0.0.212-**labs-nos-helm-x.tgz gs://**labs-nos-charts
-Error: repository "gs://**labs-nos-charts" not found. Make sure you add it to helm
+helm gcs push **labs-nos-helmboot-resources-0.0.212-**labs-nos-helm-x.tgz **labs-nos
+Error: chart **labs-nos-helmboot-resources-0.0.212-**labs-nos-helm-x already indexed. Use --force to still upload the chart
+chart **labs-nos-helmboot-resources-0.0.212-**labs-nos-helm-x already indexed. Use --force to still upload the chart
 Usage:
   helm-gcs push [chart.tar.gz] [repository] [flags]
 
@@ -107,9 +108,8 @@ Global Flags:
       --debug                    activate debug
       --service-account string   service account to use for GCS
 
-repository "gs://**labs-nos-charts" not found. Make sure you add it to helm
 Error: plugin "gcs" exited with error
-make: Leaving directory `/workspace/source/charts/**labs-nos-helmboot-resources'
 make: *** [release] Error 1
+make: Leaving directory `/workspace/source/charts/**labs-nos-helmboot-resources'
 [31m
 Pipeline failed on stage 'from-build-pack' : container 'step-build-release'. The execution of the pipeline has stopped.[0m
