@@ -1,91 +1,105 @@
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-2gghd-13[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-hw5qb[0m
-{"level":"info","ts":1590089848.8846264,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
-{"level":"info","ts":1590089848.88563,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-ks9xl-13[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-mcmq9[0m
+{"level":"info","ts":1591175874.0767753,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1591175874.0785673,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-2gghd-13[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-b8q9w[0m
-{"level":"info","ts":1590089849.379935,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
-{"level":"info","ts":1590089849.3821352,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-ks9xl-13[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-2rkjl[0m
+{"level":"info","ts":1591175875.3539991,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1591175875.3562715,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-2gghd-13[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-ks9xl-13[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-2gghd-13[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-nuxeo-jxlabs-nos-helmboot-resou-2gghd-7qgzt[0m
-{"level":"info","ts":1590089855.5405166,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
-{"level":"info","ts":1590089855.9339588,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/nuxeo/**labs-nos-helmboot-resources.git @ v0.0.205-**labs-nos in path /workspace/source"}
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-ks9xl-13[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-nuxeo-jxlabs-nos-helmboot-ks9xl-qb5mt[0m
+{"level":"info","ts":1591175881.5215197,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1591175882.1840694,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/nuxeo/**labs-nos-helmboot-resources.git @ 478727f8c4432afa9a38022f7475cb177be24ff6 in path /workspace/source"}
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-2gghd-13[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
-Using SHAs from PULL_REFS=master:166d62da38e00cf0a4c7b4d141e06e17380b7f90
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-ks9xl-13[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:478727f8c4432afa9a38022f7475cb177be24ff6
 WARNING: no SHAs to merge, falling back to initial cloned commit
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-2gghd-13[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
-Generated Git credentials file /builder/home/git/credentials
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-ks9xl-13[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-2gghd-13[0m stage [32mfrom-build-pack[0m and container [32mstep-build-basic-auth-username[0m
-Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
-/builder/home/basic-auth-user.json
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-ks9xl-13[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Cloning the Jenkins X versions repo https://github.com/nuxeo/**labs-nos-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+Effective pipeline written to jenkins-x-release-effective.yml
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-2gghd-13[0m stage [32mfrom-build-pack[0m and container [32mstep-build-basic-auth-password[0m
-Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
-/builder/home/basic-auth-pass.json
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-ks9xl-13[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+running command: /workspace/source/next-version.sh
+fatal: No names found, cannot describe anything.
+error: unknown switch `j'
+usage: git tag [-a | -s | -u <key-id>] [-f] [-m <msg> | -F <file>] <tagname> [<head>]
+   or: git tag -d <tagname>...
+   or: git tag -l [-n[<num>]] [--contains <commit>] [--no-contains <commit>] [--points-at <object>]
+		[--format=<format>] [--[no-]merged [<commit>]] [<pattern>...]
+   or: git tag -v [--format=<format>] <tagname>...
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-2gghd-13[0m stage [32mfrom-build-pack[0m and container [32mstep-build-release[0m
-make: Entering directory `/workspace/source/charts/**labs-nos-helmboot-resources'
-helm init --client-only
-Creating /builder/home/.helm 
-Creating /builder/home/.helm/repository 
-Creating /builder/home/.helm/repository/cache 
-Creating /builder/home/.helm/repository/local 
-Creating /builder/home/.helm/plugins 
-Creating /builder/home/.helm/starters 
-Creating /builder/home/.helm/cache/archive 
-Creating /builder/home/.helm/repository/repositories.yaml 
-Adding stable repo with URL: https://kubernetes-charts.storage.googleapis.com 
-Adding local repo with URL: http://127.0.0.1:8879/charts 
-$HELM_HOME has been configured at /builder/home/.helm.
-Not installing Tiller due to 'client-only' flag having been set
-Happy Helming!
-test ! -f /builder/home/.helm/plugins/helm-gcs.git && helm plugin install https://github.com/viglesiasce/helm-gcs.git --version v0.2.0
-Installed plugin: gcs
-helm repo add jenkinsxio http://chartmuseum.jenkins-x.io
-"jenkinsxio" has been added to your repositories
-rm -rf charts
-rm -rf **labs-nos-helmboot-resources*.tgz
-sed -i -e "s/version:.*/version: 0.0.205-**labs-nos/" Chart.yaml
-helm dependency build
-Hang tight while we grab the latest from your chart repositories...
-...Unable to get an update from the "local" chart repository (http://127.0.0.1:8879/charts):
-	Get http://127.0.0.1:8879/charts/index.yaml: dial tcp 127.0.0.1:8879: connect: connection refused
-...Successfully got an update from the "stable" chart repository
-...Successfully got an update from the "jenkinsxio" chart repository
-Update Complete. ⎈Happy Helming!⎈
-Saving 5 charts
-Downloading ** from repo http://chartmuseum.jenkins-x.io
-Downloading ** from repo http://chartmuseum.jenkins-x.io
-Downloading ** from repo http://chartmuseum.jenkins-x.io
-Downloading ** from repo http://chartmuseum.jenkins-x.io
-Downloading ** from repo http://chartmuseum.jenkins-x.io
-Deleting outdated charts
-helm lint
-==> Linting .
-Lint OK
+    -l, --list            list tag names
+    -n[<n>]               print <n> lines of each tag message
+    -d, --delete          delete tags
+    -v, --verify          verify tags
 
-1 chart(s) linted, no failures
-helm package .
-Successfully packaged chart and saved it to: /workspace/source/charts/**labs-nos-helmboot-resources/**labs-nos-helmboot-resources-0.0.205-**labs-nos.tgz
-helm gcs push **labs-nos-helmboot-resources*.tgz gs://**labs-nos-charts
-Copying file:///tmp/tmp.pKFJAMOXQI/repo/index.yaml [Content-Type=application/octet-stream]...
-/ [0 files][    0.0 B/  6.0 KiB]                                                / [1 files][  6.0 KiB/  6.0 KiB]                                                
-Operation completed over 1 objects/6.0 KiB.                                      
-Copying file:///tmp/tmp.pKFJAMOXQI/repo/**labs-nos-helmboot-resources-0.0.205-**labs-nos.tgz [Content-Type=application/x-tar]...
-/ [0 files][    0.0 B/ 16.8 KiB]                                                / [1 files][ 16.8 KiB/ 16.8 KiB]                                                
-Operation completed over 1 objects/16.8 KiB.                                     
-Repository initialized...
-rm -rf **labs-nos-helmboot-resources*.tgz%
-make: Leaving directory `/workspace/source/charts/**labs-nos-helmboot-resources'
+Tag creation options
+    -a, --annotate        annotated tag, needs a message
+    -m, --message <message>
+                          tag message
+    -F, --file <file>     read message from file
+    -e, --edit            force edit of tag message
+    -s, --sign            annotated and GPG-signed tag
+    --cleanup <mode>      how to strip spaces and #comments from message
+    -u, --local-user <key-id>
+                          use another key to sign the tag
+    -f, --force           replace the tag if exists
+    --create-reflog       create a reflog
 
-Showing logs for build [32mnuxeo-jxlabs-nos-helmboot-resou-2gghd-13[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-promote[0m
-make: *** No rule to make target `promote'.  Stop.
-make: Entering directory `/workspace/source/charts/**labs-nos-helmboot-resources'
-make: Leaving directory `/workspace/source/charts/**labs-nos-helmboot-resources'
+Tag listing options
+    --column[=<style>]    show tag list in columns
+    --contains <commit>   print only tags that contain the commit
+    --no-contains <commit>
+                          print only tags that don't contain the commit
+    --merged <commit>     print only tags that are merged
+    --no-merged <commit>  print only tags that are not merged
+    --sort <key>          field name to sort on
+    --points-at <object>  print only tags of the object
+    --format <format>     format to use for the output
+    --color[=<when>]      respect format colors
+    -i, --ignore-case     sorting and filtering are case insensitive
+
+error: unknown switch `j'
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --repo <repository>   repository
+    --all                 push all refs
+    --mirror              mirror all refs
+    -d, --delete          delete refs
+    --tags                push tags (can't be used with --all or --mirror)
+    -n, --dry-run         dry run
+    --porcelain           machine-readable output
+    -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --recurse-submodules[=(check|on-demand|no)]
+                          control recursive pushing of submodules
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+    --exec <receive-pack>
+                          receive pack program
+    -u, --set-upstream    set upstream for git pull/status
+    --progress            force progress reporting
+    --prune               prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --follow-tags         push missing but relevant tags
+    --signed[=(yes|no|if-asked)]
+                          GPG sign the push
+    --atomic              request atomic transaction on remote side
+    -o, --push-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+error: failed to set the version on release pipelines: failed to run '/bin/sh -c /workspace/source/next-version.sh' command in directory '/workspace/source', output: ''
 [31m
-Pipeline failed on stage 'from-build-pack' : container 'step-promote-promote'. The execution of the pipeline has stopped.[0m
+Pipeline failed on stage 'meta-pipeline' : container 'step-create-tekton-crds'. The execution of the pipeline has stopped.[0m
