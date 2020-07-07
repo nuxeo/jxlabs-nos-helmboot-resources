@@ -1611,7 +1611,7 @@ jxRequirements:
       enabled: false
       production: false
       secretName: ""
-  repository: nexus
+  repository: gcr.io/build-jx-prod/jxlabs-nos-master/nuxeo/jxlabs-nos-helmboot-resources
   secretStorage: local
   storage:
     backup:
