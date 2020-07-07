@@ -1,4 +1,5 @@
 {{- if .Values.podTemplates.enabled }}
+{{- $requirements := .Values.jxRequirements }}
 {{- $agent := .Values.podTemplates.agent -}}
 {{- $globalenv := .Values.podTemplates.globalenvVars -}}
 {{- range $pkey, $pval := .Values.podTemplates.templates }}
@@ -39,6 +40,12 @@ data:
       volumes:
       - name: workspace-volume
         emptyDir: {}
+      - name: kaniko-secret
+        secret:
+          secretName: kaniko-secret
+          items:
+          - key: kaniko-secret
+            path: kaniko/kaniko-secret.json
 {{- if $agent.dockerConfig }}
       - name: jenkins-docker-cfg
         secret:
@@ -89,6 +96,13 @@ data:
             configMapKeyRef:
               name: jenkins-x-docker-registry
               key: docker.registry
+        - name: GOOGLE_APPLICATION_CREDENTIALS
+          value: /secrets/kaniko/kaniko-secret.json
+        - name: GITHUB_ACCESS_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: knative-git-user-pass
+              key: password
   {{- if $globalenv.TILLER_NAMESPACE }}
         - name: TILLER_NAMESPACE
           value: {{ $globalenv.TILLER_NAMESPACE }}
@@ -111,9 +125,11 @@ data:
         volumeMounts:
           - mountPath: /home/jenkins
             name: workspace-volume
+          - mountPath: /secrets
+            name: kaniko-secret
   {{- if $agent.dockerConfig }}
           - name: jenkins-docker-cfg
-            mountPath: /kaniko/.docker
+            mountPath: /home/jenkins/.docker
   {{- end }}
   {{- if $agent.dockerHostPath }}
           - name: docker-daemon
