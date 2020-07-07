@@ -8,8 +8,3 @@ pipelineConfig:
     - name: build
       step:
         sh: make -C charts/jxlabs-nos-helmboot-resources build VERSION=$(cat VERSION)
-    release:
-      setVersion:
-        steps:
-        - name: next-version
-          command: /workspace/source/next-version.sh
