@@ -7,7 +7,6 @@ ifeq ($(filter v3%,$(helm-version)),)
 	helm init --client-only
 	test ! -f $(HOME)/.helm/plugins/helm-gcs && helm plugin install https://github.com/hayorov/helm-gcs --version v0.2.2
 else
-	helm init --client-only
 	test ! -f $(HOME)/.local/share/helm/plugins/helm-gcs && helm plugin install https://github.com/hayorov/helm-gcs --version v0.3.1
 endif
 	helm repo add jenkinsxio http://chartmuseum.jenkins-x.io
