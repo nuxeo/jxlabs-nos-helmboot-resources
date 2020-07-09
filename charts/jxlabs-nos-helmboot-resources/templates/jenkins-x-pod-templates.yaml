@@ -97,7 +97,10 @@ data:
               name: jenkins-x-docker-registry
               key: docker.registry
         - name: DOCKER_REGISTRY_ORG
-          value: {{ $requirements.cluster.environmentGitOwner }}
+          valueFrom:
+            configMapKeyRef:
+              name: jenkins-x-docker-registry
+              key: docker.org
         - name: GOOGLE_APPLICATION_CREDENTIALS
           value: /secrets/kaniko/kaniko-secret.json
         - name: GITHUB_ACCESS_TOKEN
