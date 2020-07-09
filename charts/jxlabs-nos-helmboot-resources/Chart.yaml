@@ -1,6 +1,7 @@
 apiVersion: v1
+appVersion: 0.0.8
 description: A Helm chart for the resources for JX Boot
-name: jxlabs-nos-helmboot-resources
-version: 0.0.1-SNAPSHOT
-icon: https://raw.githubusercontent.com/jenkins-x/jenkins-x-website/master/images/logo/jenkinsx-icon-color.svg
 home: https://github.com/nxmatic/jxlabs-nos-helmboot-resources
+icon: https://raw.githubusercontent.com/jenkins-x/jenkins-x-website/master/images/logo/jenkinsx-icon-color.svg
+name: jxlabs-nos-helmboot-resources
+version: 0.0.8
