@@ -794,7 +794,7 @@ podTemplates:
       #   value: jenkins-x-builder
       containers:
         Go:
-          image:  gcr.io/jenkinsxio/builder-go:2.1.38-668
+          image:  gcr.io/jenkinsxio/builder-go:2.1.97-724
           privileged: true
           requestCpu: "400m"
           requestMemory: "600Mi"
