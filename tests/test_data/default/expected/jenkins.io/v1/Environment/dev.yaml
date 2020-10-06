@@ -13,7 +13,7 @@ spec:
   kind: Development
   label: Development
   namespace: jx
-  promotionStrategy: Never
+  promotionStrategy: "Never"
   webHookEngine: "Lighthouse"
   teamSettings:
     appsRepository: http://chartmuseum.jenkins-x.io
@@ -22,8 +22,8 @@ spec:
     defaultScheduler:
       apiVersion: jenkins.io/v1
       kind: Scheduler
-      name: default
-    dockerRegistryOrg: "myproject"
+      name: jx-meta-pipeline
+    dockerRegistryOrg: ""
     envOrganisation: myorg
     gitServer: https://github.com
     gitPublic: true

@@ -8,6 +8,7 @@ metadata:
 spec:
   description: "the git repository for the Dev environment"
   provider: "https://github.com"
+  providerKind: 'github'
   providerName: 'github'
   org: "myorg"
   repo: "environment-mycluster-dev"
@@ -15,4 +16,4 @@ spec:
   url: "https://github.com/myorg/environment-mycluster-dev.git"
   scheduler:
     kind: Scheduler
-    name: "environment"
+    name: "in-repo"

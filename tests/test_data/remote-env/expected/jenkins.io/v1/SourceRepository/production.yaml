@@ -8,6 +8,7 @@ metadata:
 spec:
   description: "the git repository for the Production environment"
   provider: "https://github.com"
+  providerKind: 'github'
   providerName: 'github'
   org: "myorg"
   repo: "environment-mycluster-production"
@@ -15,4 +16,4 @@ spec:
   url: "https://github.com/myorg/environment-mycluster-production.git"
   scheduler:
     kind: Scheduler
-    name: "pr-only"
+    name: "in-repo"
