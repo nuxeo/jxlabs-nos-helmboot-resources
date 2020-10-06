@@ -1665,7 +1665,7 @@ jxRequirements:
   pipelineUser:
     username: ""
     email: ""
-  repository: nexus
+  repository: gcr.io/build-jx-prod/jxlabs-nos-master/jxlabs-nos-helmboot-resources
   secretStorage: local
   storage:
     backup:
