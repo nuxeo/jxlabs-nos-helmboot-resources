@@ -52,11 +52,7 @@ spec:
     defaultScheduler:
       apiVersion: jenkins.io/v1
       kind: Scheduler
-{{- if eq $lighthouseEngine "tekton" }}
-      name: jx-meta-pipeline
-{{- else }}
       name: default
-{{- end -}}
 {{- if hasKey $jx.cluster "dockerRegistryOrg" }}
     dockerRegistryOrg: "{{ $jx.cluster.dockerRegistryOrg }}"
 {{- else }}
