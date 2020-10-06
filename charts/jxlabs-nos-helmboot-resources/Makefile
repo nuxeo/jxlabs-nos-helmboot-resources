@@ -5,9 +5,9 @@ helm-version := $(shell helm version --client --template '{{.Client.SemVer}}' 2>
 setup:
 ifeq ($(filter v3%,$(helm-version)),)
 	helm init --client-only
-	test ! -f $(HOME)/.helm/plugins/helm-gcs && helm plugin install https://github.com/hayorov/helm-gcs --version v0.2.2
+	( test ! -e $(HOME)/.helm/plugins/helm-gcs && helm plugin install https://github.com/hayorov/helm-gcs --version v0.2.2  ) || true
 else
-	test ! -f $(HOME)/.local/share/helm/plugins/helm-gcs && helm plugin install https://github.com/hayorov/helm-gcs --version v0.3.1
+	( test ! -e $(HOME)/.local/share/helm/plugins/helm-gcs && helm plugin install https://github.com/hayorov/helm-gcs --version v0.3.1 ) || true
 endif
 	helm repo add jenkinsxio http://chartmuseum.jenkins-x.io
 	helm repo add jxlabs-nos gs://jxlabs-nos-charts
