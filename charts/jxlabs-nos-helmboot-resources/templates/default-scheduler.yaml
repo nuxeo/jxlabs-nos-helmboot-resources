@@ -51,18 +51,6 @@ spec:
       context: ""
       labels: {}
       maxConcurrency: 1
-      name: pre-release
-      report: false
-      runIfChanged: ""
-      skipBranches: {}
-    - agent: tekton
-      branches:
-        entries:
-        - - ^release-\d+\.\d+\.\d+$
-      cluster: ""
-      context: "release"
-      labels: {}
-      maxConcurrency: 1
       name: release
       report: false
       runIfChanged: ""
