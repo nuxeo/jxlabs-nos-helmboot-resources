@@ -8,3 +8,13 @@ pipelineConfig:
     - name: build
       step:
         sh: make -C charts/jxlabs-nos-helmboot-resources build VERSION=$(cat VERSION)
+    release:
+      setVersion:
+        replace: true
+        steps:
+          - name: git-unshallow
+            sh: git fetch --quiet --unshallow
+          - name: create-version-file
+            sh: jx step next-version --version=\$(make version)
+          - name: tag-version
+            sh: jx step tag --version=\$(cat VERSION)

@@ -438,8 +438,8 @@ gcactivities:
   - "activities"
   - "--batch-mode"
   image:
-    repository: gcr.io/jenkinsxio-labs/jxl
-    tag: 0.0.127
+    repository: gcr.io/jenkinsxio/jx
+    tag: 2.1.150
   role:
     enabled: true
     rules:
@@ -528,8 +528,8 @@ gcpods:
   - "pods"
   - "--batch-mode"
   image:
-    repository: gcr.io/jenkinsxio-labs/jxl
-    tag: 0.0.127
+    repository: gcr.io/jenkinsxio/jx
+    tag: 2.1.150
   role:
     enabled: true
     rules:
