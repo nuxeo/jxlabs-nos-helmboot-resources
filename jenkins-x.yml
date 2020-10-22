@@ -18,3 +18,12 @@ pipelineConfig:
             sh: jx step next-version --version=\$(make version)
           - name: tag-version
             sh: jx step tag --version=\$(cat VERSION)
+      promote:
+        steps:
+          - name: versions
+            sh: >-
+              jx step create pr regex 
+              --repo=https://github.com/nuxeo/jxlabs-nos-versions.git
+              --version=${VERSION} 
+              --regex="version: (.*)" 
+              --files=charts/jxlabs-nos/jxlabs-nos-helmboot-resources.yml 
