@@ -1,3 +1,5 @@
+include make.d/version.mk
+
 CHART_REPO := http://jenkins-x-chartmuseum:8080
 NAME := jxboot-helmfile-resources
 OS := $(shell uname)
