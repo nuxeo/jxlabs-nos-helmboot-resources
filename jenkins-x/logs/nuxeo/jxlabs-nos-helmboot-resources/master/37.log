@@ -1,0 +1,41 @@
+
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-fx4tp-37[0m stage [32mmeta-pipeline[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1606314052.7507644,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-fx4tp-37[0m stage [32mmeta-pipeline[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-fx4tp-37[0m stage [32mmeta-pipeline[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-fx4tp-37[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-nuxeo-jxlabs-nos-helmboot-fx4tp-4r4f8[0m
+{"level":"info","ts":1606314058.544919,"caller":"***/***.go:105","msg":"Successfully cloned ******************/nuxeo/**labs-nos-helmboot-resources.*** @ 3b643d1a88074d19d971bf4bdbea450c63cec478 in path /workspace/source"}
+{"level":"warn","ts":1606314058.545033,"caller":"***/***.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1606314058.9632473,"caller":"***/***.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-fx4tp-37[0m stage [32mmeta-pipeline[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-fx4tp-37[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:3b643d1a88074d19d971bf4bdbea450c63cec478
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-fx4tp-37[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-fx4tp-37[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Cloning the Jenkins X versions repo https://***hub.com/nuxeo/**labs-nos-versions.*** with ref refs/heads/master to /tekton/home/.**/jenkins-x-versions
+Effective pipeline written to jenkins-x-release-effective.yml
+
+Showing logs for build [32mmeta-nuxeo-jxlabs-nos-helmboot-fx4tp-37[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+running command: *** fetch --quiet --unshallow
+
+running command: ** step next-version --version=\$(make version)
+cat: /tekton/home/basic-auth-user.json: No such file or directory
+cat: /tekton/home/basic-auth-pass.json: No such file or directory
+cat: /tekton/home/basic-auth-user.json: No such file or directory
+cat: /tekton/home/basic-auth-pass.json: No such file or directory
+/bin/sh: -c: line 0: syntax error near unexpected token `('
+/bin/sh: -c: line 0: `echo [ERROR] No plugin found for prefix 'help' in the current project and in the plugin groups [org.apache.maven.plugins, org.codehaus.mojo] available from the repositories [local (/root/agent/workspace/.mvnrepository), team (https://nexus-**.**labs-nos-master.build-**-prod.build.nuxeo.com/repository/maven-group/)] -> [Help 1] [ERROR]  [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch. [ERROR] Re-run Maven using the -X switch to enable full debug logging. [ERROR]  [ERROR] For more information about the errors and possible solutions, please read the following articles: [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/NoPluginFoundForPrefixException'
+make: *** [version~print] Error 1
+error: no filename flag set to work out next semantic version.  choose pom.xml, Chart.yaml, package.json, Makefile or set the flag use-***-tag-only
+error: failed to set the version on release pipelines: failed to run '/bin/sh -c ** step next-version --version=$(make version)' command in directory '/workspace/source', output: ''
+[31m
+Pipeline failed on stage 'meta-pipeline' : container 'step-create-tekton-crds'. The execution of the pipeline has stopped.[0m
